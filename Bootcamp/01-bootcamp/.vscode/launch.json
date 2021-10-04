@@ -1,0 +1,112 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch Arrays_Examples",
+            "request": "launch",
+            "mainClass": "Arrays_Examples",
+            "projectName": "01-bootcamp_ab456588"
+        },
+        {
+            "type": "java",
+            "name": "Launch Arrays_Lab",
+            "request": "launch",
+            "mainClass": "Arrays_Lab",
+            "projectName": "01-bootcamp_ab456588"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ifs_Examples",
+            "request": "launch",
+            "mainClass": "Ifs_Examples",
+            "projectName": "01-bootcamp_ab456588"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ifs_Lab",
+            "request": "launch",
+            "mainClass": "Ifs_Lab",
+            "projectName": "01-bootcamp_ab456588"
+        },
+        {
+            "type": "java",
+            "name": "Launch List_Examples",
+            "request": "launch",
+            "mainClass": "List_Examples",
+            "projectName": "01-bootcamp_ab456588"
+        },
+        {
+            "type": "java",
+            "name": "Launch List_Lab",
+            "request": "launch",
+            "mainClass": "List_Lab",
+            "projectName": "01-bootcamp_ab456588"
+        },
+        {
+            "type": "java",
+            "name": "Launch Loops_Examples",
+            "request": "launch",
+            "mainClass": "Loops_Examples",
+            "projectName": "01-bootcamp_ab456588"
+        },
+        {
+            "type": "java",
+            "name": "Launch Loops_Lab",
+            "request": "launch",
+            "mainClass": "Loops_Lab",
+            "projectName": "01-bootcamp_ab456588"
+        },
+        {
+            "type": "java",
+            "name": "Launch Matrices_Examples",
+            "request": "launch",
+            "mainClass": "Matrices_Examples",
+            "projectName": "01-bootcamp_ab456588"
+        },
+        {
+            "type": "java",
+            "name": "Launch Matrices_Lab",
+            "request": "launch",
+            "mainClass": "Matrices_Lab",
+            "projectName": "01-bootcamp_ab456588"
+        },
+        {
+            "type": "java",
+            "name": "Launch NestedLoops_Examples",
+            "request": "launch",
+            "mainClass": "NestedLoops_Examples",
+            "projectName": "01-bootcamp_ab456588"
+        },
+        {
+            "type": "java",
+            "name": "Launch NestedLoops_Lab",
+            "request": "launch",
+            "mainClass": "NestedLoops_Lab",
+            "projectName": "01-bootcamp_ab456588"
+        },
+        {
+            "type": "java",
+            "name": "Launch String_Examples",
+            "request": "launch",
+            "mainClass": "String_Examples",
+            "projectName": "01-bootcamp_ab456588"
+        },
+        {
+            "type": "java",
+            "name": "Launch String_Lab",
+            "request": "launch",
+            "mainClass": "String_Lab",
+            "projectName": "01-bootcamp_ab456588"
+        }
+    ]
+}

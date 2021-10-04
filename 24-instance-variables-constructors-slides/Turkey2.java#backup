@@ -1,0 +1,42 @@
+//(c) A+ Computer Science
+// www.apluscompsci.com
+
+//constructor example 
+
+class Turkey2
+{
+	private int size;
+	private boolean fly;
+	private int age;
+	
+	public Turkey2()
+	{
+		size = 0;
+		fly = false;
+	}
+	
+	public Turkey2( int s )
+	{
+		size = s;
+		fly = false;
+	}
+	
+	//add a fourth constructor
+	
+	public Turkey2( int s, boolean c )
+	{
+		size = s;
+		fly = c;
+	}
+   
+	public Turkey2 (int s, boolean c, int a) {
+	      size = s;
+	      fly = c;
+	      age = a;
+	  }
+	  
+   public void print()
+   {
+   	System.out.println( size + " " + fly + " " +age);
+   }
+}

@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Eagle
+comment1.params=s\ c\ a
+comment1.target=Eagle(int,\ boolean,\ int)
+comment2.params=
+comment2.target=Eagle()
+comment3.params=s
+comment3.target=Eagle(int)
+comment4.params=s\ c
+comment4.target=Eagle(int,\ boolean)
+comment5.params=
+comment5.target=void\ print()
+numComments=6
