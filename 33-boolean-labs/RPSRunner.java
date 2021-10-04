@@ -21,7 +21,7 @@ public class RPSRunner
             player = keyboard.next();
             RockPaperScissors game = new RockPaperScissors(player);
             System.out.print(game.toString());
-            System.out.print("\n\nDo you want to play again? ");
+            System.out.print("\n\nDo you want to play again? [y/n]:: ");
             response = keyboard.next().charAt(0);
         } while (response == 'y');
 	
