@@ -35,26 +35,26 @@ public class Extra_Sorting_Lab
         long startTime = System.currentTimeMillis();
         boolean finished = true;
         long comparisons = 0;
-        // while (true){
-        //     finished = true;
-        //     for (int i = 0; i < array.length-1; i++){
-        //         // int min = Math.min(array[i], array[i+1]);
-        //         if(array[i] > array[i+1]){
-        //             int t = array[i];
-        //             array[i] = array[i+1];
-        //             array[i+1] = t;
-        //         }
-        //     }
-        //     for (int i = 0; i < array.length-1; i++){
-        //         if (array[i] > array[i+1]){
-        //             finished = false;
-        //         }
-        //     }
-        //     comparisons++;
-        //     // System.out.println("Comparisions: " + comparisons);
-        //     if(finished) break;
-        // }
-        Arrays.sort(array);
+        while (true){
+            finished = true;
+            for (int i = 0; i < array.length-1; i++){
+                // int min = Math.min(array[i], array[i+1]);
+                if(array[i] > array[i+1]){
+                    int t = array[i];
+                    array[i] = array[i+1];
+                    array[i+1] = t;
+                }
+            }
+            for (int i = 0; i < array.length-1; i++){
+                if (array[i] > array[i+1]){
+                    finished = false;
+                }
+            }
+            comparisons++;
+            // System.out.println("Comparisions: " + comparisons);
+            if(finished) break;
+        }
+        // Arrays.sort(array);
         long endTime = System.currentTimeMillis();
         long time = endTime-startTime;
                 
