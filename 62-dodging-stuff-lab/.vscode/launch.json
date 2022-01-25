@@ -1,0 +1,35 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch Game",
+            "request": "launch",
+            "mainClass": "Game",
+            "projectName": "62-dodging-stuff-lab_86b2a8fb"
+        },
+        {
+            "type": "java",
+            "name": "Launch GroundRunner",
+            "request": "launch",
+            "mainClass": "GroundRunner",
+            "projectName": "62-dodging-stuff-lab_86b2a8fb"
+        },
+        {
+            "type": "java",
+            "name": "Launch PersonRunner",
+            "request": "launch",
+            "mainClass": "PersonRunner",
+            "projectName": "62-dodging-stuff-lab_86b2a8fb"
+        }
+    ]
+}
