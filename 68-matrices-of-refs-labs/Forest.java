@@ -61,6 +61,7 @@ public class Forest
                 }
             }
         }
+        // System.out.print(cnt);
 		return cnt > 5;
 	}
 
@@ -75,7 +76,7 @@ public class Forest
         String out = "";
 		for(int i = 0; i < grid.length; i++) {
             for(int j = 0; j < grid[i].length; j++) {
-                out += grid[i][j].toString() + "\t";
+                out += grid[i][j] == null ? "null\t" : grid[i][j].toString() + "\t";
             }
             out += "\n";
         }
