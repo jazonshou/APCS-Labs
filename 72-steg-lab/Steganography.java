@@ -148,6 +148,98 @@ public class Steganography {
         return pic;
     }
 
+    /**
+     * Takes a string consisting of letters and spaces and
+     * encodes the string into an arraylist of integers.
+     * The integers are 1-26 for A-Z, 27 for space, and 0 for end of
+     * string. The arraylist of integers is returned.
+     * @param s string consisting of letters and spaces
+     * @return ArrayList containing integer encoding of uppercase
+     * version of s
+     */
+    public static ArrayList<Integer> encodeString(String s)
+    {
+        s = s.toUpperCase();
+        String alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        ArrayList<Integer> result = new ArrayList<Integer>();
+        for (int i = 0; i < s.length(); i++)
+        {
+            if (s.substring(i,i+1).equals(" "))
+            {
+                result.add(27);
+            }
+            else
+            {
+                result.add(alpha.indexOf(s.substring(i,i+1))+1);
+            }
+        }
+        result.add(0);
+        return result;
+    } 
+
+    /**
+    * Returns the string represented by the codes arraylist.
+    * 1-26 = A-Z, 27 = space
+    * @param codes encoded string
+    * @return decoded string
+    */
+    public static String decodeString(ArrayList<Integer> codes)
+    {
+        String result="";
+        String alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        for (int i=0; i < codes.size(); i++)
+        {
+            if (codes.get(i) == 27)
+            {
+                result = result + " ";
+            }
+            else
+            {
+                result = result + alpha.substring(codes.get(i)-1,codes.get(i));
+            }
+        }
+        return result;
+    } 
+
+    /**
+    * Given a number from 0 to 63, creates and returns a 3-element
+    * int array consisting of the integers representing the
+    * pairs of bits in the number from right to left.
+    * @param num number to be broken up
+    * @return bit pairs in number
+    */
+    private static int[] getBitPairs(int num)
+    {
+        int[] bits = new int[3];
+        int code = num;
+        for (int i = 0; i < 3; i++)
+        {
+            bits[i] = code % 4;
+            code = code / 4;
+        }
+        return bits;
+    }
+
+    /**
+     * Hide a string (must be only capital letters and spaces) in a
+     * picture.
+     * The string always starts in the upper left corner.
+     * @param source picture to hide string in
+     * @param s string to hide
+     * @return picture with hidden string
+     */
+    public static void hideText(Picture source, String s) {
+        Pixel[][] pixels = source.getPixels2D();
+        ArrayList<Integer> encryptedMessage = encodeString(s);
+        ArrayList<Integer> encryptedBits = new ArrayList<Integer>();
+        for(int i = 0; i < encryptedMessage.size(); i++) {
+            int[] bits = getBitPairs(encryptedMessage.get(i));
+            for(int j = 0; j < bits.length; j++) {
+                encryptedBits.add(bits[j]);
+            }
+        }
+    }
+
     public static void main(String[] args) {
         // Picture source = new Picture("beach.jpg");
         // Picture secret = new Picture("temple.jpg");
