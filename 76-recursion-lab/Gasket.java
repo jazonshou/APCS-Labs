@@ -24,6 +24,7 @@ public class Gasket extends Canvas implements Runnable
 		window.drawString("Sierpinski's Gasket", 25, 50);
 
 		gasket(window, (WIDTH-10)/2, 20, WIDTH-40, HEIGHT-20, 40, HEIGHT-20);
+        tree(window, 650, 350, -90, 12);
 	}
 
 	public void gasket(Graphics window, int x1, int y1, int x2, int y2, int x3, int y3)
@@ -51,6 +52,20 @@ public class Gasket extends Canvas implements Runnable
             gasket(window, leftMidX, leftMidY, bottomMidX, bottomMidY, x3, y3);
         }
 	}
+
+    public void tree(Graphics window, int x1, int y1, double angle, int depth) {
+        if (depth > 0) {
+            var red = (int)(Math.random()*255);
+            var green = (int)(Math.random()*255);
+            var blue = (int)(Math.random()*255);
+            window.setColor(new Color(red, green, blue));
+            var x2 = x1 + (Math.cos(Math.toRadians(angle)) * depth) * 3;
+            var y2 = y1 + (Math.sin(Math.toRadians(angle)) * depth) * 3;
+            window.drawLine((int)x1, (int)y1, (int)x2, (int)y2);
+            tree(window, (int)x2, (int)y2, angle - 10, depth - 1);
+            tree(window, (int)x2, (int)y2, angle + 30, depth - 1);
+        }
+    }
 
 	public void run()
 	{
